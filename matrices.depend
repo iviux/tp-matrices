@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1711581769 source:c:\utn\programacion\matrices\pila.c
+	"array.h"
+
+1712272639 c:\utn\programacion\matrices\array.h
+	<stdio.h>
+	<stdlib.h>
+	<malloc.h>
+	"pila.h"
+
+1711406557 c:\utn\programacion\matrices\pila.h
+	<stdio.h>
+	<malloc.h>
+
+1712794922 source:c:\utn\programacion\matrices\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<locale.h>
+	"matriz.h"
+
+1712863615 c:\utn\programacion\matrices\matriz.h
+	<stdio.h>
+	<stdlib.h>
+	<malloc.h>
+	<string.h>
+	"pila.h"
+
+1712865792 source:c:\utn\programacion\matrices\matriz.c
+	"matriz.h"
+
