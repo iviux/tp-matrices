@@ -23,7 +23,7 @@ void subir(P_Pila p, int bloque);
 void cargarPila (Pila *carga);
 void pasarPila(Pila *vieja, Pila *nueva);
 void transferirPila(Pila *vieja, Pila *nueva);
-int buscarMenor(P_Pila p);
+//int buscarMenor(P_Pila p);
 void transferirPilaOrdenada(P_Pila p, P_Pila p2);
 void ordenar(P_Pila p);
 void insertar(P_Pila p, int n);

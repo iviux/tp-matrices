@@ -30,3 +30,5 @@ void mostrarMatriz (Matriz *a);
 void sumarMatriz (Matriz *a);
 void promedioMatriz (Matriz *a);
 void buscarEnMatriz (Matriz *a);
+void ordenarColumnas (Matriz *a);
+void ordenarMatriz (Matriz *a);

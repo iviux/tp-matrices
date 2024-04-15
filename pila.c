@@ -143,37 +143,37 @@ void transferirPila(P_Pila p, P_Pila p2)
     invertir(p2);
 }
 
-int buscarMenor(P_Pila p)
-{
-    Pila aux;
-    inicpila(&aux);
-    int menor = tope(p);
-
-    while (!pilavacia(p))
-    {
-        if(tope(p)>=menor)
-        {
-            apilar(&aux, desapilar(p));
-        }
-        else
-        {
-            menor=tope(p);
-        }
-    }
-    while(!pilavacia(&aux))
-    {
-        if(tope(&aux)!= menor)
-        {
-            apilar(p, desapilar(&aux));
-        }
-        else
-        {
-            desapilar(&aux);
-        }
-    }
-
-    return menor;
-}
+//int buscarMenor(P_Pila p)
+//{
+//    Pila aux;
+//    inicpila(&aux);
+//    int menor = tope(p);
+//
+//    while (!pilavacia(p))
+//    {
+//        if(tope(p)>=menor)
+//        {
+//            apilar(&aux, desapilar(p));
+//        }
+//        else
+//        {
+//            menor=tope(p);
+//        }
+//    }
+//    while(!pilavacia(&aux))
+//    {
+//        if(tope(&aux)!= menor)
+//        {
+//            apilar(p, desapilar(&aux));
+//        }
+//        else
+//        {
+//            desapilar(&aux);
+//        }
+//    }
+//
+//    return menor;
+//}
 
 void transferirPilaOrdenada (P_Pila p, P_Pila p2)
 {

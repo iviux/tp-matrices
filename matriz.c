@@ -436,3 +436,102 @@ void buscarEnMatriz (Matriz *a)
     }
 }
 
+void ordenarColumnas (Matriz *a)
+{
+    if (TIPO == 'c')
+    {
+        char menor;
+        INDEX = 0;
+
+        while (INDEX < INDMAX)
+        {
+            for (int i = 0; i < TAM[INDEX]; i++)
+            {
+                menor = a->C[INDEX][i];
+
+                for (int j = i; j < TAM[INDEX]; j++)
+                {
+                    if (a->C[INDEX][j] < menor)
+                    {
+                        menor = a->C[INDEX][j];
+                        a->C[INDEX][j] = a->C[INDEX][i];
+                        a->C[INDEX][i] = menor;
+                    }
+                }
+            }
+
+            INDEX++;
+        }
+    }
+    else if (TIPO == 'i')
+    {
+        int menor = 0;
+        INDEX = 0;
+
+        while (INDEX < INDMAX)
+        {
+            for (int i = 0; i < TAM[INDEX]; i++)
+            {
+                menor = a->V[INDEX][i];
+
+                for (int j = i; j < TAM[INDEX]; j++)
+                {
+                    if (a->V[INDEX][j] < menor)
+                    {
+                        menor = a->V[INDEX][j];
+                        a->V[INDEX][j] = a->V[INDEX][i];
+                        a->V[INDEX][i] = menor;
+                    }
+                }
+            }
+
+            INDEX++;
+        }
+    }
+    else if (TIPO == 'f')
+    {
+        float menor = 0;
+        INDEX = 0;
+
+        while (INDEX < INDMAX)
+        {
+            for (int i = 0; i < TAM[INDEX]; i++)
+            {
+                menor = a->F[INDEX][i];
+
+                for (int j = i; j < TAM[INDEX]; j++)
+                {
+                    if (a->F[INDEX][j] < menor)
+                    {
+                        menor = a->F[INDEX][j];
+                        a->F[INDEX][j] = a->F[INDEX][i];
+                        a->F[INDEX][i] = menor;
+                    }
+                }
+            }
+
+            INDEX++;
+        }
+    }
+
+}
+
+void ordenarMatriz (Matriz *a)
+{
+    if (TIPO == 'c')
+    {
+
+    }
+    else if (TIPO == 'i')
+    {
+
+    }
+    else if (TIPO == 'f')
+    {
+
+    }
+    else
+    {
+
+    }
+}

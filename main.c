@@ -18,6 +18,7 @@ int main()
         system("cls");
         printf("Trabajo Practico de Funciones con Matrices.\n\n");
         printf("Seleccione el ejercicio que desea visualizar: \n\n");
+        printf("  0) Salir.\n");
         printf("  1) Cargar la Matriz.\n");
         printf("  2) Mostrar la Matriz.\n");
         printf("  3) Cargar aleatorio.\n");
@@ -101,6 +102,8 @@ int main()
             case 7:
             {
                 printf("7) Ordenar Matriz.\n\n");
+
+                ordenarColumnas (&matrix);
 
                 salir(&q);
 
