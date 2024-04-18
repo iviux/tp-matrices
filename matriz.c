@@ -4,7 +4,7 @@ void salir(char *q)
 {
     // Funcion para decidir si se desea seguir editando un arreglo o volver a la seleccion
 
-    printf("\nPresione una tecla para continuar, q para salir.");
+    printf("\nPresione una tecla para continuar, 'esc' para salir.");
     fflush(stdin);
     *q = getch();
 
@@ -116,7 +116,7 @@ void cargarMatriz (Matriz *a)
 
         salir(&q);
 
-    }while (q != 'q');
+    }while (q != 27);
 
     system("cls");
     printf("La Matriz fue cargada con %d elementos.\n", INDMAX);
@@ -436,6 +436,11 @@ void buscarEnMatriz (Matriz *a)
     }
 }
 
+int comparar(const void *a, const void *b)
+{
+    return strcmp(*(const char **)a, *(const char **)b);
+}
+
 void ordenarColumnas (Matriz *a)
 {
     if (TIPO == 'c')
@@ -513,25 +518,31 @@ void ordenarColumnas (Matriz *a)
             INDEX++;
         }
     }
+    else
+    {
+        qsort(a->C, INDMAX, sizeof(char *), comparar);
+    }
 
 }
 
-void ordenarMatriz (Matriz *a)
+int determinante (Matriz *a)
 {
-    if (TIPO == 'c')
-    {
 
-    }
-    else if (TIPO == 'i')
-    {
+    int det = (a->V[0][0] * a->V[1][1])-(a->V[0][1] * a->V[1][0]);
 
-    }
-    else if (TIPO == 'f')
-    {
+    return det;
+}
 
+void inversa (Matriz *a)
+{
+    int det = determinante(a);
+
+    if (det != 0)
+    {
+        printf("La matriz tiene inversa");
     }
     else
     {
-
+        printf("La matriz no tiene inversa");
     }
 }

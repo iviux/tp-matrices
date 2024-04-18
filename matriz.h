@@ -31,4 +31,7 @@ void sumarMatriz (Matriz *a);
 void promedioMatriz (Matriz *a);
 void buscarEnMatriz (Matriz *a);
 void ordenarColumnas (Matriz *a);
+int compararStrings(const void *a, const void *b);
 void ordenarMatriz (Matriz *a);
+int determinante (Matriz *a);
+void inversa (Matriz *a);

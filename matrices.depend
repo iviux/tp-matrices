@@ -12,20 +12,20 @@
 	<stdio.h>
 	<malloc.h>
 
-1713221342 source:c:\utn\programacion\matrices\main.c
+1713454787 source:c:\utn\programacion\matrices\main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
 	<locale.h>
 	"matriz.h"
 
-1713221331 c:\utn\programacion\matrices\matriz.h
+1713454630 c:\utn\programacion\matrices\matriz.h
 	<stdio.h>
 	<stdlib.h>
 	<malloc.h>
 	<string.h>
 	"pila.h"
 
-1713221331 source:c:\utn\programacion\matrices\matriz.c
+1713454630 source:c:\utn\programacion\matrices\matriz.c
 	"matriz.h"
 

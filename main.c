@@ -7,7 +7,7 @@
 int main()
 {
     setlocale(LC_ALL, "spanish");
-    int r = 0;
+    int r = 0, det;
     char q;
     Matriz matrix;
     nuevaMatriz(&matrix);
@@ -26,8 +26,11 @@ int main()
         printf("  5) Calcular el promedio de la Matriz.\n");
         printf("  6) Buscar en la Matriz. \n");
         printf("  7) Ordenar Matriz.\n");
-        printf("  8) Mostrar determinante.\n");
-        printf("  9) Verificar si tiene inversa.\n");
+        if (matrix.tipo == 'i')
+        {
+            printf("  8) Mostrar determinante.\n");
+            printf("  9) Verificar si tiene inversa.\n");
+        }
 
         fflush(stdin);
         scanf("%d", &r);
@@ -37,7 +40,7 @@ int main()
         {
             case 0:
             {
-                q = 'q';
+                q = 27;
 
                 break;
             }
@@ -113,6 +116,16 @@ int main()
             {
                 printf("8) Mostrar determinante.\n\n");
 
+                if (matrix.tipo == 'i' && matrix.MAX == 2 && matrix.T[0] == 2 && matrix.T[1] == 2)
+                {
+                    det = determinante(&matrix);
+                    printf("La determinante de la matriz de 2x2 es: %d\n", det);
+                }
+                else
+                {
+                    printf("La matriz no es de 2x2\n");
+                }
+
                 salir(&q);
 
                 break;
@@ -120,6 +133,8 @@ int main()
             case 9:
             {
                 printf("9) Verificar si tiene inversa.\n\n");
+
+                inversa(&matrix);
 
                 salir(&q);
 
@@ -131,7 +146,7 @@ int main()
             }
         }
 
-    }while(q != 'q');
+    }while(q != 27);
 
 
 
